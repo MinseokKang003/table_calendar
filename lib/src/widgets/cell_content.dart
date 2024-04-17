@@ -60,11 +60,12 @@ class CellContent extends StatelessWidget {
       );
     }
 
-    final text = DateFormat.d(locale).format(day);
+    // final text = DateFormat.d(locale).format(day);
+    final text = day.day.toString();
     final margin = calendarStyle.cellMargin;
     final padding = calendarStyle.cellPadding;
     final alignment = calendarStyle.cellAlignment;
-    final duration = const Duration(milliseconds: 250);
+    final duration = const Duration(milliseconds: 150);
 
     if (isDisabled) {
       cell = calendarBuilders.disabledBuilder?.call(context, day, focusedDay) ??
